@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "policyProfile": "default",
+  "repoRoot": ".",
+  "defaults": {
+    "requestedMode": "analysis-only",
+    "maxValidationLevel": 0,
+    "runtimeApproval": false,
+    "writeRunArtifacts": true
+  },
+  "approvals": {
+    "build": "allowed-after-hook",
+    "activate": "explicit",
+    "loginDownload": "explicit",
+    "plcStateChange": "explicit",
+    "adsRead": "explicit",
+    "adsWrite": "explicit",
+    "ioChange": "explicit",
+    "taskChange": "explicit",
+    "libraryChange": "explicit",
+    "routeChange": "explicit"
+  },
+  "output": {
+    "runDirectory": ".harness/runs/<requestId>",
+    "ignoreRunArtifactsByDefault": true
+  },
+  "createdBy": "twincat-team-template"
+}
+

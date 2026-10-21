@@ -1,0 +1,8 @@
+# Harness run artifacts are local by default.
+runs/*
+!runs/.gitkeep
+
+# Keep project-level Harness policy reviewable.
+!config.json
+!.gitignore
+
