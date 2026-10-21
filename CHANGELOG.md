@@ -2,6 +2,12 @@
 
 All notable changes to this template are recorded here.
 
+## 0.1.1 - 2026-10-21
+
+- 將第一次導入的 AI 安全邊界集中寫入 README。
+- 明確規定 Dry Run、衝突停止、禁止覆寫，以及初始化期間不得 Build、Runtime、Commit 或 Push。
+- 新增可直接貼給 Orca 的最短初始化 Prompt。
+
 ## 0.1.0 - 2026-10-21
 
 - 建立 TwinCAT 團隊協作初版模板。

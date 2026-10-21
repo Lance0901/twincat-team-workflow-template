@@ -29,6 +29,30 @@
 
 不得把聊天紀錄當作專案狀態。規範、決策與驗證結果必須保存在 Repository、Pull Request 或 Harness artifacts。
 
+## AI 初始化 TwinCAT Repository
+
+當目標 TwinCAT Repository 尚未安裝本模板時，AI 必須遵守以下初始化安全契約：
+
+```text
+先執行 Dry Run。
+有檔案衝突就停止，不得覆寫。
+只執行靜態檢查。
+不得開啟 TwinCAT XAE、Build 或操作 Runtime。
+未取得使用者明確授權前，不得 Commit、Push、建立 PR 或 Merge。
+```
+
+初始化期間不得修改 PLC Source、I/O Mapping、PLC Task、Library、Route 或 Target。不得從範例、其他專案、歷史 Harness artifacts 或聊天紀錄推測目前 TwinCAT Project、Target 或 AmsNetId。
+
+Orca 第一次導入時，可以只使用以下 Prompt：
+
+```text
+依照這份 README 的「AI 初始化 TwinCAT Repository」流程，
+將模板導入目前 Repository：
+https://github.com/Lance0901/twincat-team-workflow-template
+```
+
+完成導入後，AI 必須讀取目標 Repository 新增的 `AGENTS.md`、`PROJECT_STATE.md`、`STYLE_GUIDE.md`、`docs/architecture/team-workflow.md` 與 `.harness/config.json`，再執行 `tools/Setup-Project.ps1`。
+
 ## Repository 結構
 
 ```text
